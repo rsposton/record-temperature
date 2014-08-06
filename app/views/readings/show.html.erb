@@ -1,0 +1,26 @@
+<div class="readings show">
+  <h2>Show Temperature Reading</h2>
+
+  <table summary="readings detail view">
+    <tr>
+      <th>ID</th>
+      <td><%= @reading.id %></td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td><%= @reading.location %></td>
+    </tr>
+    <tr>
+      <th>Temperature</th>
+      <td><%= @reading.temperature %></td>
+    </tr>
+    <tr>
+      <th>Recorded At</th>
+      <td><%= @reading.recorded_at.in_time_zone("Pacific Time (US & Canada)") %></td>
+    </tr>
+    <tr>
+      <th>Created At</th>
+      <td><%= @reading.created_at %></td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,25 @@
+<div class="readings new">
+  <h2>Create Reading</h2>
+
+  <%= form_for(:reading, :url => {:action => 'create'}) do |f| %>
+    <table summary="reading form fields">
+        <tr>
+            <th>Location</th>
+            <td><%= f.text_field(:location) %></td>
+        </tr>
+        <tr>
+            <th>Temperature</th>
+            <td><%= f.text_field(:temperature) %></td>
+        </tr>
+        <tr>
+            <th>Recorded At</th>
+            <td><%= f.text_field(:recorded_at) %></td>
+        </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= submit_tag("Create Reading") %>
+    </div>
+
+    <% end %>
+</div>
