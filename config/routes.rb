@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'graphs/index'
+
   namespace :api do
     resources :readings
   end
