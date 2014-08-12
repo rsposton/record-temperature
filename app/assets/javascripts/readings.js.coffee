@@ -3,16 +3,17 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
   data = {
-    labels : ["January","February","March","April","May","June","July"],
+    labels : $('#chart_for_temp').data('label'),
+#    labels:  [1,2,3,4,5],
     datasets : [
       {
         fillColor : "rgba(220,220,220,0.5)",
         strokeColor : "rgba(220,220,220,1)",
         pointColor : "rgba(220,220,220,1)",
         pointStrokeColor : "#fff",
-        data : $('#canvas').data('readings')
+        data : $('#chart_for_temp').data('readings')
       }
     ]
   }
 
-  myNewChart = new Chart($("#canvas").get(0).getContext("2d")).Line(data)
+  myNewChart = new Chart($("#chart_for_temp").get(0).getContext("2d")).Line(data)

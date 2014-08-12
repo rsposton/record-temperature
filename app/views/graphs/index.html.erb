@@ -24,10 +24,9 @@
   </table>
 </div>
 
-<%= content_tag(:canvas, "", width: 600, height: 400, id: "canvas", data: {readings: @readings.map(&:temperature)} ) %>
+<canvas data-readings="<%= @readings.map(&:temperature) %>" height="400" id="chart_for_temp" data-label="<%= get_graph_labels %>" width="600" style="width: 600px; height: 400px;"></canvas>
 
 <% if ENV["RAILS_ENV"] == "development" %>
 <p><pre><%= p params %></pre></p>
-<%= @readings.map(&:temperature) %>
 <% end %>
 
